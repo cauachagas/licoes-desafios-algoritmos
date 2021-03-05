@@ -51,13 +51,14 @@ def solution(A, K):
         # retorna uma lista vazia
         # necessário para passar em um dos testes
         return A
-    else:
-        lista = A
-        # rotacionando por K vezes
-        for i in range(K):
-            # recebe o ultimo valor de A na primeira posição
-            # e recebe a partir da segunda posição os demais valores de A 
-            lista[0], lista[1:] = A[-1], A[:-1]
-            # A recebe a lista rotacionada
-            A = lista
-        return lista
+
+    lista = A
+    # rotacionando por K vezes
+    for i in range(K):
+        # recebe o ultimo valor de A na primeira posição
+        # e recebe a partir da segunda posição os demais valores de A
+        lista[0], lista[1:] = A[-1], A[:-1]
+        # A recebe a lista rotacionada
+        A = lista
+
+    return lista
